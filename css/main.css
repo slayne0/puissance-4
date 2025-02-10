@@ -1,0 +1,44 @@
+
+* {
+    box-sizing: border-box;
+}
+
+
+li {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: blue;
+    border: solid 2px;
+}
+
+body {
+    background-color: blue;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: solid 3px;
+    width: 630px;
+    padding-top: 16px;
+    padding-bottom: 32px;
+    border-radius: 32px;
+    background-color: white;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+
+.juste-colone {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
