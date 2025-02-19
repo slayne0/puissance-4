@@ -27,6 +27,8 @@ $grid.forEach(function($gameScreenGridCell) {
 
 
 function checkWin(board, y, DX) {
+
+
        // colonne
     let result = 0
     let player = notplayer
@@ -120,7 +122,6 @@ function checkWin(board, y, DX) {
     
 
     for (let e = 0; e < 5; e++) {
-        console.log("====")
         if (result >= 4) {
             if (player === "y") {
                 yelloWin = true
@@ -140,7 +141,6 @@ function checkWin(board, y, DX) {
             }  else {         
                 if (board[y+e][x+e] === player) {
                     result += 1
-                    console.log(result)
                 } else {
                 }
             }
@@ -200,8 +200,8 @@ function checkWin(board, y, DX) {
 
 
 
-
 $grid.forEach(function($grid) {
+
     $grid.addEventListener("click", function() {
         const dataX = $grid.getAttribute("data-x")
         const dataY = $grid.getAttribute("data-y") 
@@ -209,10 +209,7 @@ $grid.forEach(function($grid) {
         const cDeX = $grid.getAttribute(parseInt("data-x"))
         // console.log(parseInt(dataX))
 
-
-
-
-        console.log(gameBoard)
+        if (yelloWin === false && redWin === false) {
 
         for (let i = 5; i >= 0; i--) {
             const $test = document.querySelector(`.grid-case[data-x="${dataX}"][data-y="${i}"]`)
@@ -246,6 +243,8 @@ $grid.forEach(function($grid) {
                 
             }
         }
+
+    }
     })
 })
 

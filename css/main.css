@@ -1,6 +1,7 @@
 
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 
@@ -45,6 +46,32 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.main-page-button {
+    color: white;
+    background-color: #5C2DD5;
+    border-radius: 16px;
+    padding: 8px 16px 8px 16px;
+}
+
+header {
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 52px;
+    margin-bottom: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-page-main {
+    display: flex;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
 }
 
 
