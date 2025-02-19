@@ -8,12 +8,12 @@ li {
     width: 70px;
     height: 70px;
     border-radius: 100%;
-    background-color: blue;
+    background-color: #7945FF;
     border: solid 2px;
 }
 
 body {
-    background-color: blue;
+    background-color: #7945FF;
 }
 
 .grid {
@@ -45,4 +45,54 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.hidden {
+    display: none;
 }
