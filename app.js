@@ -202,7 +202,7 @@ function checkWin(board, y, DX) {
                 result += 1
             } else {
                 passage = 1
-                e = -1
+                e = 0
             }
         } else {  
             if (e+y > 5 || e === -1) {
