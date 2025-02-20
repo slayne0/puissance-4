@@ -1,7 +1,12 @@
 const $grid = document.querySelectorAll(".grid-case")
 const $colone = document.querySelectorAll(".juste-colone")
 const $gameScreenGridCells = document.querySelectorAll(".grid")
-
+const $footer = document.querySelector("footer")
+const $restart = document.querySelector(".main-page-button-restart")
+const $restart2 = document.querySelector(".play-again")
+const $restart3 = document.querySelector(".play-again2")
+const $winner1 = document.querySelector(".winner1")
+const $winner2 = document.querySelector(".winner2")
 
 // const $myCell = document.querySelector('.grid-case[data-x="2"][data-y="2"]')
 // $myCell.classList.add("tomato")
@@ -18,6 +23,69 @@ let gameBoard = [
     ["", "", "", "", "", "", ""],
     ["", "", "", "", "", "", ""],
 ]
+
+$restart.addEventListener("click", function() {
+    $grid.forEach(function($gameScreenGridCell) {
+        $gameScreenGridCell.classList.remove("yellow", "red")
+    })
+    gameBoard = [
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+    ]
+    yelloWin = false
+    redWin = false
+    $footer.classList.remove("yellow", "red")
+    $winner1.classList.add("hidden")
+    $winner2.classList.add("hidden")
+})
+
+$restart2.addEventListener("click", function() {
+    $grid.forEach(function($gameScreenGridCell) {
+        $gameScreenGridCell.classList.remove("yellow", "red")
+    })
+    gameBoard = [
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+    ]
+    yelloWin = false
+    redWin = false
+    $footer.classList.remove("yellow", "red")
+    $winner1.classList.add("hidden")
+    $winner2.classList.add("hidden")
+})
+
+$restart3.addEventListener("click", function() {
+    $grid.forEach(function($gameScreenGridCell) {
+        $gameScreenGridCell.classList.remove("yellow", "red")
+    })
+    gameBoard = [
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+        ["", "", "", "", "", "", ""],
+    ]
+    yelloWin = false
+    redWin = false
+    $footer.classList.remove("yellow", "red")
+    $winner1.classList.add("hidden")
+    $winner2.classList.add("hidden")
+})
+
+
+
+
+
+
 
 $grid.forEach(function($gameScreenGridCell) {
     $gameScreenGridCell.innerHTML = ""
@@ -188,6 +256,14 @@ function checkWin(board, y, DX) {
             
         }
     }
+
+    if (yelloWin === true) {
+        $footer.classList.add("yellow")
+        $winner2.classList.remove("hidden")
+    } else if (redWin === true) {
+        $footer.classList.add("red")
+        $winner1.classList.remove("hidden")
+    }
 }
 
 
@@ -242,9 +318,9 @@ $grid.forEach(function($grid) {
                 
                 
             }
-        }
+        } 
 
-    }
+    } 
     })
 })
 
